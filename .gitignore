@@ -1,4 +1,6 @@
-bower_components/
 node_modules/
-.DS_Store
 _build/
+npm-debug.log
+.DS_Store
+local_config.json
+todo.txt

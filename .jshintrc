@@ -1,3 +1,6 @@
 {
-    "esnext": true
+  "undef": true,
+  "unused": true,
+  "predef": [ "console", "document", "window" ],
+  "esnext": true
 }
