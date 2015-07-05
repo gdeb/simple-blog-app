@@ -15,6 +15,22 @@ body {
     color: white;
     width: 250px;
     vertical-align: top;
+    .title {
+        cursor: pointer;
+        text-align: center;
+        font-size: 22px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid white;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    ul {
+        margin-top: 20px;
+        list-style-type: none;
+    }
 }
 
 .navbar {

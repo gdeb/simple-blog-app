@@ -9,6 +9,7 @@ export function init ({title, content}) {
 
 export function render (state) {
     return h('div.blog', [
+        h('div.date', state.date),
         h('h1.title', state.title),
         h('div.post', state.content),
     ]);

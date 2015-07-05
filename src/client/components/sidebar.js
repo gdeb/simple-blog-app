@@ -1,6 +1,6 @@
 import {default as hg, h} from '../mercury.js';
 
-import {anchor as a} from '../router.js';
+import {anchor as a, pushState} from '../router.js';
 
 export function init () {
     return hg.state({
@@ -10,7 +10,9 @@ export function init () {
 
 export function render (state, style) {
     return h('div.sidebar', {style}, [
-        h('div.title', 'Modulo Zero'),
+        h('div.title', {
+            'ev-click': () => pushState('/'),
+        }, 'Modulo Zero'),
         h('ul', [
             h('li',  a({ href: '/'}, 'recent posts')),
             h('li', a({href: '/archives'}, 'archives')),

@@ -71,7 +71,7 @@ export function anchor(props, text) {
     var href = props.href;
     // props.href = '#';
 
-    props['ev-click'] = clickEvent(pushState, {
+    props['ev-click'] = clickEvent(() => pushState(href), {
         ctrl: false,
         meta: false,
         rightClick: false
@@ -84,6 +84,9 @@ export function anchor(props, text) {
     }
 }
 
+export function pushState(url) {
+    atom.set(url);
+}
 
 // ROUTEVIEW ----------------------------------------------------
 export function init() {
