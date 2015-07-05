@@ -1,42 +1,23 @@
-Test
 
-http://developer.telerik.com/featured/choose-es6-modules-today/
+Simple blog application
+========================
 
-browser-sync in dev mode
-vantage (https://github.com/dthree/vantage) support for repl
+This is a simple project, just for fun and to experiment with javascript technologies. The goal is to obtain a project such that:
+* full javascript, because I like it
+* ES2015, because this is the future, and I believe it is a good improvement on ES5
+* serverside rendering, because it is important for SEO and user experience
+* maintainable: good conventions, good separation of concerns, ...
 
-have dev and production mode
 
-in dev mode, update to scss, or html, or js => reload corresponding asset
+The blog itself will be (if all goes well):
+* a SPA (single page application), with client side routing
+*  with so-called "isomorphic" applications: having as much code shared between the server and the client.
+* as light as possible.  No jquery, no bootstrap, no underscore.  First goal is to get it under
+30kb minified/gzipped (approximately jquery size, alone)
 
-remove config.json and use config.js instead
-_tmp/
-  public/  <-- will be destroyed, recreated, ...
-  dbfile
 
-client/
-resources/
-  scss/
-  templates/
-  images/
-
-server/
-  db/
-    sql/
-      user.sql
-      session.sql
-      ...
-    index.js
-    user.js
-    session.js
-  routes/
-    home.js
-  index.js
-  server.js
-  middleware.js
-  session.js
-
-strategy:
-
-make a prepare.js script in js
-put config in package.json
+Right now, the technology stack looks like:
+* nodejs/iojs for server code
+* sqlite3 for db
+* mercury for client rendering (based on virtual-dom)
+* kefir for FRP support
