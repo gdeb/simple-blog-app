@@ -21,3 +21,8 @@ Right now, the technology stack looks like:
 * sqlite3 for db
 * mercury for client rendering (based on virtual-dom)
 * kefir for FRP support
+
+
+To do
+-------------
+* find a way to have hot reload of javascript code

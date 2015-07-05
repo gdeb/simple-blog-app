@@ -1,5 +1,5 @@
-import {default as hg, h} from 'mercury';
-import {default as initRouter, render as renderRouter} from 'mercury-router';
+import {default as hg, h} from '../mercury.js';
+import {init as initRouter, render as renderRouter} from '../router.js';
 
 import {init as initBlogs, render as renderBlogs, fetchBlogs} from './blog_list.js';
 
@@ -7,18 +7,16 @@ import {init as initBlogs, render as renderBlogs, fetchBlogs} from './blog_list.
 export function init () {
     const state = {
         route: initRouter(),
+        blogs: initBlogs(fetchBlogs()),
     };
-    if (state.route() === '/blogs') {
-        state.blogs = initBlogs(fetchBlogs());
-    }
     return hg.state(state);
 }
 
 export function render (state, style) {
     return h('div.content', {style}, renderRouter(state, {
-        '/': () => h('h1', ['Home']),
-        '/animals': () => h('h1', ['Animals']),
-        '/blogs': () => renderBlogs(state.blogs),
+        '/': () => renderBlogs(state.blogs),
+        '/archives': () => h('h1', ['Archives']),
+        '/about': () => h('h1', ['About']),
         '/animals/:id': params => h('h1', ['Animals ' + params.id]),
     }));
 }

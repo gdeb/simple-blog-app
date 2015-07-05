@@ -1,5 +1,5 @@
 import K from 'kefir';
-import hg from 'mercury';
+import hg from './mercury.js';
 
 export function toObservable (prop, initial_value) {
     const obs = hg.value(initial_value);

@@ -1,4 +1,4 @@
-import {app} from 'mercury';
+import {app} from './mercury.js';
 
 import {init, render} from './components/app.js';
 

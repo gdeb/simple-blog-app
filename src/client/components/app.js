@@ -1,5 +1,5 @@
 
-import {default as hg, h} from 'mercury';
+import {default as hg, h} from '../mercury.js';
 
 import {init as initNavbar, render as renderNavbar} from './navbar.js';
 import {init as initFooter, render as renderFooter} from './footer.js';

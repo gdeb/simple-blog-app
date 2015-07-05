@@ -1,4 +1,4 @@
-import {default as hg, h} from 'mercury';
+import {default as hg, h} from '../mercury.js';
 import K from 'kefir';
 
 import {init as initBlog, render as renderBlog} from './blog_post.js';
@@ -25,6 +25,9 @@ export function init (blogs) {
 }
 
 export function render (state) {
-    console.log("rrr", state.blogs);
-    return state.blogs === false ? h('div.loading', 'loading') : state.blogs.map(renderBlog);
+    if (state === false || state.blogs === false) {
+        return h('div.loading', 'loading');
+    } else {
+        return state.blogs.map(renderBlog);
+    }
 }
