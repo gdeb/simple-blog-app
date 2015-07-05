@@ -25,6 +25,10 @@ export function init (blogs) {
 }
 
 export function render (state) {
-    console.log("rrr", state.blogs);
-    return state.blogs === false ? h('div.loading', 'loading') : state.blogs.map(renderBlog);
+    console.log(state);
+    if (state === false || state.blogs === false) {
+        return h('div.loading', 'loading');
+    } else {
+        return state.blogs.map(renderBlog);
+    }
 }

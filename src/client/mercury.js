@@ -1,5 +1,3 @@
-'use strict';
-
 var SingleEvent = require('geval/single');
 var MultipleEvent = require('geval/multiple');
 var extend = require('xtend');
@@ -18,37 +16,18 @@ var mercury = module.exports = {
 
     // Input
     Delegator: require('dom-delegator'),
-    // deprecated: use hg.channels instead.
-    input: input,
-    // deprecated: use hg.channels instead.
-    handles: channels,
     channels: channels,
-    // deprecated: use hg.send instead.
-    event: require('value-event/event'),
+
     send: require('value-event/event'),
-    // deprecated: use hg.sendValue instead.
-    valueEvent: require('value-event/value'),
-    sendValue: require('value-event/value'),
-    // deprecated: use hg.sendSubmit instead.
-    submitEvent: require('value-event/submit'),
-    sendSubmit: require('value-event/submit'),
-    // deprecated: use hg.sendChange instead.
-    changeEvent: require('value-event/change'),
-    sendChange: require('value-event/change'),
-    // deprecated: use hg.sendKey instead.
-    keyEvent: require('value-event/key'),
-    sendKey: require('value-event/key'),
-    // deprecated use hg.sendClick instead.
-    clickEvent: require('value-event/click'),
-    sendClick: require('value-event/click'),
+    // sendValue: require('value-event/value'),
+    // sendSubmit: require('value-event/submit'),
+    // sendChange: require('value-event/change'),
+    // sendKey: require('value-event/key'),
+    // sendClick: require('value-event/click'),
 
     // State
-    // remove from core: favor hg.varhash instead.
-    array: require('observ-array'),
     struct: require('observ-struct'),
-    // deprecated: use hg.struct instead.
-    hash: require('observ-struct'),
-    varhash: require('observ-varhash'),
+    // varhash: require('observ-varhash'),
     value: require('observ'),
     state: state,
 
@@ -59,11 +38,6 @@ var mercury = module.exports = {
     create: require('virtual-dom/vdom/create-element'),
     h: require('virtual-dom/virtual-hyperscript'),
 
-    // Utilities
-    // remove from core: require computed directly instead.
-    computed: require('observ/computed'),
-    // remove from core: require watch directly instead.
-    watch: require('observ/watch')
 };
 
 function input(names) {

@@ -28,6 +28,7 @@
     "observ-struct": "^6.0.0",
     "observ-varhash": "^1.0.6",
     "rimraf": "^2.4.0",
+    "route-map": "^0.1.0",
     "sqlite3": "^3.0.8",
     "uglify-js": "^2.4.23",
     "value-event": "^5.1.0",
