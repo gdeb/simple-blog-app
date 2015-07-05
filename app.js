@@ -87,6 +87,8 @@ define_task('prepare_dev', function () {
     make_folder('_build/dev/', raw_logger);
     make_folder('_build/dev/static/css/', raw_logger);
     make_folder('_build/dev/static/js/', raw_logger);
+    logger('copying favicon.ico to static folder');
+    exec_cmd('cp resources/images/favicon.ico _build/dev/static/', raw_logger);
 
     logger('compiling resources/scss into _build/dev/static/css');
     exec_cmd(compile_styles('_build/dev/static/css'), raw_logger);
@@ -104,6 +106,8 @@ define_task('prepare_prod', function () {
     make_folder('_build/prod/tmp', raw_logger);
     make_folder('_build/prod/static/css/', raw_logger);
     make_folder('_build/prod/static/js/', raw_logger);
+    logger('copying favicon.ico to static folder');
+    exec_cmd('cp resources/images/favicon.ico _build/prod/static/', raw_logger);
 
     logger('compiling resources/scss into _build/prod/tmp');
     exec_cmd(compile_styles('_build/prod/tmp'), raw_logger);

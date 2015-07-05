@@ -2,8 +2,8 @@
 import {default as hg, h} from '../mercury.js';
 
 import {init as initNavbar, render as renderNavbar} from './navbar.js';
-import {init as initFooter, render as renderFooter} from './footer.js';
-import {init as initSidebar, render as renderSidebar} from './sidebar.js';
+import {render as renderFooter} from './footer.js';
+import {render as renderSidebar} from './sidebar.js';
 import {init as initMainContent, render as renderMainContent} from './mainContent.js';
 
 import {makeObservable} from '../utils.js';
@@ -17,9 +17,7 @@ export function init () {
         isLarge: isLarge,
         layout: layout,
         navbar: initNavbar(),
-        sidebar: initSidebar(),
         content: initMainContent(),
-        footer: initFooter(),
     });
 }
 

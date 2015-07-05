@@ -16,7 +16,8 @@ export function render (state, style) {
     return h('div.content', {style}, renderRouter(state, {
         '/': () => renderBlogs(state.blogs),
         '/archives': () => h('h1', ['Archives']),
+        '/demos': () => h('h1', ['Demos']),
         '/about': () => h('h1', ['About']),
-        '/animals/:id': params => h('h1', ['Animals ' + params.id]),
+        '/article/:title': params => h('h1', ['Article ' + params.title]),
     }));
 }

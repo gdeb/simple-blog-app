@@ -14,6 +14,7 @@
     "iojs": "^1.0.0",
     "kefir": "^2.7.0",
     "koa": "^0.21.0",
+    "koa-favicon": "^1.2.0",
     "koa-gzip": "^0.1.0",
     "koa-router": "^5.1.2",
     "koa-static": "^1.4.9",

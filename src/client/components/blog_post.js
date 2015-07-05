@@ -1,16 +1,12 @@
-import {default as hg, h} from '../mercury.js';
-
-export function init ({title, content}) {
-    return hg.state({
-        title: hg.value(title),
-        content: hg.value(content),
-    });
-}
+import {h} from '../mercury.js';
+import {pushState} from '../router.js';
 
 export function render (state) {
     return h('div.blog', [
         h('div.date', state.date),
-        h('h1.title', state.title),
+        h('h1.title', {
+            'ev-click': () => pushState('/article/' + state.encoded_title)
+        }, state.title),
         h('div.post', state.content),
     ]);
 }

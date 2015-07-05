@@ -26,3 +26,4 @@ Right now, the technology stack looks like:
 To do
 -------------
 * find a way to have hot reload of javascript code
+* add a favicon, and use koa-favicon to serve it
