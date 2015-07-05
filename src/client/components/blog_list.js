@@ -25,7 +25,6 @@ export function init (blogs) {
 }
 
 export function render (state) {
-    console.log(state);
     if (state === false || state.blogs === false) {
         return h('div.loading', 'loading');
     } else {

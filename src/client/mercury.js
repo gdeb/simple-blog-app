@@ -1,24 +1,32 @@
-var SingleEvent = require('geval/single');
-var MultipleEvent = require('geval/multiple');
-var extend = require('xtend');
+import SingleEvent from 'geval/single';
+import MultipleEvent from 'geval/multiple';
+import extend from 'xtend';
 
-/*
-    Pro tip: Don't require `mercury` itself.
-      require and depend on all these modules directly!
-*/
-var mercury = module.exports = {
+import main from 'main-loop';
+import BaseEvent from 'value-event/base-event';
+import send from 'value-event/event';
+import Delegator from 'dom-delegator';
+import value from 'observ';
+import struct from 'observ-struct';
+import varhash from 'observ-varhash';
+import diff from 'virtual-dom/vtree/diff';
+import patch from 'virtual-dom/vdom/patch';
+import partial from 'vdom-thunk';
+import create from 'virtual-dom/vdom/create-element';
+import h from 'virtual-dom/virtual-hyperscript';
+
+const mercury = {
     // Entry
-    main: require('main-loop'),
-    app: app,
+    main,
+    app,
 
     // Base
-    BaseEvent: require('value-event/base-event'),
+    BaseEvent,
 
     // Input
-    Delegator: require('dom-delegator'),
-    channels: channels,
-
-    send: require('value-event/event'),
+    Delegator,
+    channels,
+    send,
     // sendValue: require('value-event/value'),
     // sendSubmit: require('value-event/submit'),
     // sendChange: require('value-event/change'),
@@ -26,27 +34,19 @@ var mercury = module.exports = {
     // sendClick: require('value-event/click'),
 
     // State
-    struct: require('observ-struct'),
-    // varhash: require('observ-varhash'),
-    value: require('observ'),
+    struct,
+    varhash,
+    value,
     state: state,
 
     // Render
-    diff: require('virtual-dom/vtree/diff'),
-    patch: require('virtual-dom/vdom/patch'),
-    partial: require('vdom-thunk'),
-    create: require('virtual-dom/vdom/create-element'),
-    h: require('virtual-dom/virtual-hyperscript'),
-
+    diff,
+    patch,
+    partial,
+    create,
+    h,
 };
-
-function input(names) {
-    if (!names) {
-        return SingleEvent();
-    }
-
-    return MultipleEvent(names);
-}
+export default mercury;
 
 function state(obj) {
     var copy = extend(obj);
