@@ -1,4 +1,4 @@
-import {default as hg, h} from 'mercury';
+import {default as hg, h} from '../mercury.js';
 import {anchor as a} from 'mercury-router';
 
 export function init () {

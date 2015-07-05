@@ -1,4 +1,4 @@
-import {default as hg, h} from 'mercury';
+import {default as hg, h} from '../mercury.js';
 
 export function init() {
     return hg.state({

@@ -1,4 +1,4 @@
-import {default as hg, h} from 'mercury';
+import {default as hg, h} from '../mercury.js';
 import {default as initRouter, render as renderRouter} from 'mercury-router';
 
 import {init as initBlogs, render as renderBlogs, fetchBlogs} from './blog_list.js';

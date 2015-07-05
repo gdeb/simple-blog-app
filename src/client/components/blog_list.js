@@ -1,4 +1,4 @@
-import {default as hg, h} from 'mercury';
+import {default as hg, h} from '../mercury.js';
 import K from 'kefir';
 
 import {init as initBlog, render as renderBlog} from './blog_post.js';
