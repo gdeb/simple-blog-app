@@ -1,0 +1,54 @@
+@import '../../node_modules/normalize.scss/normalize.scss';
+@import './variables.scss';
+@import './icons.scss';
+
+body {
+    font-family: HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+.sidebar {
+    background-color: $main-color;
+    color: white;
+    width: 250px;
+    vertical-align: top;
+}
+
+.navbar {
+    background-color: $main-color;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    span.menu {
+        padding: 8px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    span.title {
+        margin: auto;
+    }
+}
+
+.content {
+    padding: 20px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    background-color: $main-color;
+    height: 50px;
+    color: white;
+    span {
+        margin: 0px 10px;
+    }
+    .comments {
+        flex-grow: 1;
+    }
+}
