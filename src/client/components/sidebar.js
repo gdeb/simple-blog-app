@@ -1,5 +1,5 @@
-import {h} from '../mercury.js';
-import {anchor as a, pushState} from '../router.js';
+import {h} from '../mercury';
+import {anchor as a, pushState} from '../router';
 
 export function render (state, style) {
     return h('div.sidebar', {style}, [

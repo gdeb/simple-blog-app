@@ -1,5 +1,5 @@
-import {h} from '../mercury.js';
-import {pushState} from '../router.js';
+import {h} from '../mercury';
+import {pushState} from '../router';
 
 export function render (state) {
     return h('div.blog', [

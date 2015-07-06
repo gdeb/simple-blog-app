@@ -1,8 +1,8 @@
-import {default as hg, h} from '../mercury.js';
 import K from 'kefir';
 
-import {init as initBlog, render as renderBlog} from './blog_post.js';
-import {toObservable} from '../utils.js';
+import {default as hg, h} from '../mercury';
+import {render as renderBlog} from './blog_post';
+import {toObservable} from '../utils';
 
 const blogsList = [
     {title: "great title", content: "awesome content", date: "6 june 2015"},

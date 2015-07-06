@@ -1,20 +1,18 @@
 
-import {default as hg, h} from '../mercury.js';
+import {default as hg, h} from '../mercury';
 
-import {init as initNavbar, render as renderNavbar} from './navbar.js';
-import {render as renderFooter} from './footer.js';
-import {render as renderSidebar} from './sidebar.js';
-import {init as initMainContent, render as renderMainContent} from './mainContent.js';
+import {init as initNavbar, render as renderNavbar} from './navbar';
+import {render as renderFooter} from './footer';
+import {render as renderSidebar} from './sidebar';
+import {init as initMainContent, render as renderMainContent} from './mainContent';
 
-import {makeObservable} from '../utils.js';
+import {makeObservable} from '../utils';
 
-const isLarge = makeObservable(() =>  window.innerWidth > 650);
 const layout = makeObservable(() => window.innerWidth > 950 ? 'two-columns' : 'mobile');
 
 
 export function init () {
     return hg.state({
-        isLarge: isLarge,
         layout: layout,
         navbar: initNavbar(),
         content: initMainContent(),

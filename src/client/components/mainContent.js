@@ -1,7 +1,6 @@
-import {default as hg, h} from '../mercury.js';
-import {init as initRouter, render as renderRouter} from '../router.js';
-
-import {init as initBlogs, render as renderBlogs, fetchBlogs} from './blog_list.js';
+import {default as hg, h} from '../mercury';
+import {init as initRouter, render as renderRouter} from '../router';
+import {init as initBlogs, render as renderBlogs, fetchBlogs} from './blog_list';
 
 
 export function init () {

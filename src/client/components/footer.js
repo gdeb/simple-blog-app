@@ -1,5 +1,5 @@
-import {default as hg, h} from '../mercury.js';
-import {anchor as a} from '../router.js';
+import {h} from '../mercury';
+import {anchor as a} from '../router';
 
 
 export function render () {

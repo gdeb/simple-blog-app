@@ -23,6 +23,7 @@ if (ENV === 'prod') {
 // logger
 app.use(logger);
 
+
 var html_response = fs.readFileSync(TEMPLATES_DIR + 'home.html', "utf8");
 const not_found = fs.readFileSync(TEMPLATES_DIR + '404.html', "utf8");
 
